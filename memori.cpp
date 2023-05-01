@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include "memori.h"
 
-
 void inicializarFila(Fila* fila) {
     fila->inicio = NULL;
     fila->fim = NULL;
