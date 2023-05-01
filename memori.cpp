@@ -1,15 +1,6 @@
 #include "i2c.h"
 #include "digital.h"
 #include <stdio.h>
-#include "esp_system.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_system.h"
-#include "esp_spi_flash.h"
-#include "driver/uart.h"
-#include "driver/gpio.h"
-#include "digital.h"
-
 #include "memori.h"
 
 
@@ -24,9 +15,9 @@ int estaVazia(Fila* fila) {
 }
 
 
-void enfileirar(Fila* fila, Contato contato) {
-    No* novoNo = (No*) malloc(sizeof(No));
-    novoNo->contato = contato;
+void enfileirar(Fila* fila, tipo_registro tipo) {
+    NO* novoNo = (NO*) malloc(sizeof(NO));
+    novoNo->contato = tipo;
     novoNo->proximo = NULL;
 
     if (estaVazia(fila)) {
@@ -41,17 +32,15 @@ void enfileirar(Fila* fila, Contato contato) {
 
 tipo_registro desenfileirar(Fila* fila) {
     if (estaVazia(fila)) {
-        Contato contatoVazio;
-        strcpy(contatoVazio.nome, "");
-        strcpy(contatoVazio.telefone, "");
-        strcpy(contatoVazio.endereco.rua, "");
-        contatoVazio.endereco.numero = 0;
-        strcpy(contatoVazio.endereco.cidade, "");
-        return contatoVazio;
+        tipo_registro tipo
+        strcpy(tipo.nome, "");
+        strcpy(tipo.telefone, "");
+        strcpy(tipo.endereco, "");
+        return tipo;
     }
 
-    No* noRemovido = fila->inicio;
-    Contato contato = noRemovido->contato;
+    NO* noRemovido = fila->inicio;
+    tipo_registro tipo = noRemovido->tipo;
 
     fila->inicio = noRemovido->proximo;
     free(noRemovido);
