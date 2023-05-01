@@ -9,6 +9,7 @@
 #include "digital.h"
 #include "delay.h"
 #include "i2c.h"
+#include "memori.h"
 #include <inttypes.h> 
 
 #define DEVICE 0x50
