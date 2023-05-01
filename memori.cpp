@@ -10,3 +10,5 @@
 #include "driver/gpio.h"
 #include "digital.h"
 
+#include "memori.h"
+
