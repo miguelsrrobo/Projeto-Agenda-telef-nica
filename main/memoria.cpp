@@ -1,10 +1,14 @@
 #include "memoria.h"
+#include "i2c.h"
+// void MEMORIA::init(gpio_num_t pinoDados, gpio_num_t pinoCLOCK)
+// {
+//     tipo_registro *tipo;
+//     tipo->endereco = 0;
+//     tipo->nome = 0;
+//     tipo->telefone = 0;
+// }
 
-void MEMORIA::init(gpio_num_t pinoDados, gpio_num_t pinoCLOCK)
-{
-    
-}
-void MEMORIA::write(void *buffer, uint16_t tam)
+void MEMORIA::write(void *buffer, uint16_t endereco_base)
 {
 	uint8_t x=0;
 	while (buffer[x] != 0)
