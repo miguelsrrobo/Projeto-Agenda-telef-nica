@@ -7,13 +7,10 @@
 #include "driver/gpio.h"
 #include "digital.h"
 #include "delay.h"
-#include "i2c.h"
 #include "memoria.h"
 #include <inttypes.h> 
 
-#define DEVICE 0x50
 
-I2C i2c =  I2C();
 volatile uint32_t x;
 
 

@@ -1,5 +1,5 @@
 #include "memoria.h"
-#include "i2c.h"
+
 // void MEMORIA::init(gpio_num_t pinoDados, gpio_num_t pinoCLOCK)
 // {
 //     tipo_registro *tipo;
@@ -8,7 +8,7 @@
 //     tipo->telefone = 0;
 // }
 
-void MEMORIA::write(void *buffer, uint16_t endereco_base)
+void MEMORIA::write(char *buffer, uint16_t endereco_base)
 {
 	uint8_t x=0;
 	while (buffer[x] != 0)
@@ -19,7 +19,7 @@ void MEMORIA::write(void *buffer, uint16_t endereco_base)
 	fazEscrita(endereco_base+x,buffer[x]);
 }
 
-void MEMORIA::read(uint16_t endereco)
+uint8_t MEMORIA::read(uint16_t endereco)
 {
     uint8_t a;
 	testa_se_esta_pronto();
