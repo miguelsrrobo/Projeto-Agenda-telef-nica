@@ -1,0 +1,51 @@
+typedef struct
+{
+    uint16_t qtdRegistros;
+    uint16_t qtdMAX;
+}Tipo_Cabecalho;
+
+typedef struct {
+    char nome[20];
+    char telefone[14];
+    char endereco[30];
+}tipo_registro;
+
+void esxreverCabecalho (uint16_t numero_do_registro, tipo_registro &R)
+{
+    memoria.write(0, C, sizeof(Tipo_Cabecalho));
+}
+
+void formata (void){
+    Tipo_Cabecalho xx;
+    xx.qtdRegistros = 0; 
+    xx.qtdMAX = 1023;
+    esxreverCabecalho(xx);
+}
+
+void insere(void)
+{
+    char nome[30], telefone[30], endereco[30];
+
+    printf("Entre com os valores:\n");
+    printf("Nome:");    gets(nome);
+    printf("telefone:"); gets(telefone);
+    printf("endereco:"); gets(endereco);
+
+    tipo_registro R;
+    strcpy(R.nome,nome);
+
+
+    // calcula a posicao do proximo registro a inserir
+    endFisico = sd.sfd.f
+
+    memoria.write(endFisico,&R, sizeof(tipo_registro));
+
+    memoria.write(endFisico,(char*)&R, sizeof(tipo_registro));
+    //            uint16_t n, char *p, uint16_t tmp);
+    fazInsere();
+}
+
+
+
+
+

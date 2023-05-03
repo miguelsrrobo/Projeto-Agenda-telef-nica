@@ -1,49 +1,56 @@
-#include <stdio.h>
 #include "memoria.h"
 
-typedef struct
+void MEMORIA::init(gpio_num_t pinoDados, gpio_num_t pinoCLOCK)
 {
-    uint16_t qtdRegistros;
-    uint16_t qtdMAX;
-}Tipo_Cabecalho;
-
-typedef struct {
-    char nome[20];
-    char telefone[14];
-    char endereco[30];
-}tipo_registro;
-
-void esxreverCabecalho (uint16_t numero_do_registro, tipo_registro &R)
+    
+}
+void MEMORIA::write(void *buffer, uint16_t tam)
 {
-    memoria.write(0, C, sizeof(Tipo_Cabecalho));
+	uint8_t x=0;
+	while (buffer[x] != 0)
+	{
+		fazEscrita(endereco_base+x,buffer[x]);
+		x++;
+	}
+	fazEscrita(endereco_base+x,buffer[x]);
 }
 
-void formata (void){
-    Tipo_Cabecalho xx;
-    xx.qtdRegistros = 0; 
-    xx.qtdMAX = 1023;
-    esxreverCabecalho(xx);
+void MEMORIA::read(uint16_t endereco)
+{
+    uint8_t a;
+	testa_se_esta_pronto();
+	i2c.start();
+	i2c.write(DEVICE << 1); // operacao fake
+	i2c.write(endereco >> 8);
+	i2c.write(endereco);
+	i2c.start(); // agora sim eh leitura
+	i2c.write( (DEVICE << 1) | 1);
+	a = i2c.read();
+	i2c.stop();
+	return a;
 }
 
-void insere(void)
+void MEMORIA::fazEscrita (uint16_t endereco, uint8_t valor)
 {
-    char nome[30], telefone[30], endereco[30];
+	testa_se_esta_pronto();
+	i2c.start();
+	i2c.write(DEVICE << 1);	 
+	i2c.write(endereco >> 8);
+	i2c.write(endereco);
+	i2c.write(valor);
+	i2c.stop();
+}
 
-    printf("Entre com os valores:\n");
-    printf("Nome:");    gets(nome);
-    printf("telefone:"); gets(telefone);
-    printf("endereco:"); gets(endereco);
-
-    tipo_registro R;
-    strcpy(R.nome,nome);
-
-
-    // calcula a posicao do proximo registro a inserir
-    endFisico = sd.sfd.f
-
-    memoria.write(endFisico,&R, sizeof(tipo_registro));
-
-    memoria.write(endFisico,(char*)&R, sizeof(tipo_registro));
-    //            uint16_t n, char *p, uint16_t tmp);
-    fazInsere();
+void MEMORIA::testa_se_esta_pronto(void)
+{
+	uint8_t a;
+	while (1)
+	{
+		i2c.start();
+		a = i2c.write(DEVICE << 1);
+		if (a==0) break;
+		i2c.stop();
+		delay_ms(10);
+	}
+	i2c.stop();
 }
