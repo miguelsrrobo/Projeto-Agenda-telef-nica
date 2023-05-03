@@ -1,0 +1,15 @@
+port/esp8266/base64.o: \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/mbedtls/port/esp8266/base64.c \
+ /home/miguel/Documentos/i2c_teste/build/include/sdkconfig.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/mbedtls/port/include/esp8266/esp_base64.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/ibus_data.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/util_assert.h
+
+/home/miguel/Documentos/i2c_teste/build/include/sdkconfig.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/mbedtls/port/include/esp8266/esp_base64.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/ibus_data.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/util_assert.h:
+/home/miguel/esp/ESP8266_RTOS_SDK/components/mbedtls/port/esp8266/base64.c:

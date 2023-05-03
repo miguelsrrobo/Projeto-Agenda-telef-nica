@@ -1,0 +1,17 @@
+#
+# This is a project Makefile. It is assumed the directory this Makefile resides in is a
+# project subdirectory.
+#
+# make -f Makefile.linux
+
+GCC=GCC
+FLAGS=-Wall -D__EMULA_LINUX__
+
+app:    main/testador.o main/memoria.o 
+    gcc main/testador.o main/memoria.o -o app
+
+memoria.o: main/memoria.cpp main/memoria.h
+    gcc main/memoria.cpp -c
+
+testador.o: main/testador.cpp
+    gcc main/testador.cpp - c
