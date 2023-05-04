@@ -19,7 +19,7 @@ void formata (void){
     Tipo_Cabecalho xx;
     xx.qtdRegistros = 0; 
     xx.qtdMAX = 1023;
-    esxreverCabecalho(xx);
+    excreverCabecalho(xx);
 }
 
 void insere(void)

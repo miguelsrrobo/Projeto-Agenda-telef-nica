@@ -1,22 +1,12 @@
 memoria.o: \
  /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/memoria.cpp \
  /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/memoria.h \
- /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/digital.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/gpio.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
- /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/include/sdkconfig.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/gpio_register.h \
- /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/i2c.h \
- /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/delay.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_system.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/include/sdkconfig.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/private/projdefs.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/private/portable.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/private/deprecated_definitions.h \
@@ -38,49 +28,40 @@ memoria.o: \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/private/mpu_wrappers.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/heap/include/esp_heap_caps.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/heap/port/esp8266/include/esp_heap_config.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/task.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/private/list.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_system.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/spi_flash/include/esp_spi_flash.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/spi_flash/include/spi_flash.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/uart.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/log/include/esp_log.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/log/include/esp_log_internal.h \
- /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/queue.h
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/queue.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/gpio.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
+ /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/gpio_register.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/digital.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/delay.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/i2c.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/bd.h
 
 /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/memoria.h:
-
-/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/digital.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/gpio.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h:
-
-/home/miguel/Documentos/Projeto-Agenda-telef-nica/build/include/sdkconfig.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/gpio_register.h:
-
-/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/i2c.h:
-
-/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/delay.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_system.h:
-
-/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h:
 
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/build/include/sdkconfig.h:
+
 /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/private/projdefs.h:
 
@@ -124,11 +105,17 @@ memoria.o: \
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/heap/include/esp_heap_caps.h:
 
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h:
+
 /home/miguel/esp/ESP8266_RTOS_SDK/components/heap/port/esp8266/include/esp_heap_config.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/task.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/private/list.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_system.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/spi_flash/include/esp_spi_flash.h:
 
@@ -141,4 +128,20 @@ memoria.o: \
 /home/miguel/esp/ESP8266_RTOS_SDK/components/log/include/esp_log_internal.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/queue.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/gpio.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h:
+
+/home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/gpio_register.h:
+
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/digital.h:
+
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/delay.h:
+
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/i2c.h:
+
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/bd.h:
 /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/./memoria.cpp:

@@ -1,7 +1,8 @@
-testador.o: /home/miguel/Documentos/i2c_teste/main/testador.cpp \
+testador.o: \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/testador.cpp \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
- /home/miguel/Documentos/i2c_teste/build/include/sdkconfig.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/include/sdkconfig.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
@@ -42,15 +43,17 @@ testador.o: /home/miguel/Documentos/i2c_teste/main/testador.cpp \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
  /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/gpio_register.h \
- /home/miguel/Documentos/i2c_teste/main/digital.h \
- /home/miguel/Documentos/i2c_teste/main/delay.h \
- /home/miguel/Documentos/i2c_teste/main/i2c.h
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/digital.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/delay.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/memoria.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/i2c.h \
+ /home/miguel/Documentos/Projeto-Agenda-telef-nica/main/bd.h
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h:
 
-/home/miguel/Documentos/i2c_teste/build/include/sdkconfig.h:
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/build/include/sdkconfig.h:
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h:
 
@@ -132,9 +135,13 @@ testador.o: /home/miguel/Documentos/i2c_teste/main/testador.cpp \
 
 /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/gpio_register.h:
 
-/home/miguel/Documentos/i2c_teste/main/digital.h:
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/digital.h:
 
-/home/miguel/Documentos/i2c_teste/main/delay.h:
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/delay.h:
 
-/home/miguel/Documentos/i2c_teste/main/i2c.h:
-/home/miguel/Documentos/i2c_teste/main/./testador.cpp:
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/memoria.h:
+
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/i2c.h:
+
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/bd.h:
+/home/miguel/Documentos/Projeto-Agenda-telef-nica/main/./testador.cpp:

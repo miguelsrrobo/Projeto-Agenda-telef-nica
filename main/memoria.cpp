@@ -1,12 +1,13 @@
 #include "memoria.h"
 
-// void MEMORIA::init(gpio_num_t pinoDados, gpio_num_t pinoCLOCK)
-// {
-//     tipo_registro *tipo;
-//     tipo->endereco = 0;
-//     tipo->nome = 0;
-//     tipo->telefone = 0;
-// }
+I2C i2c =  I2C();
+
+void MEMORIA::init(uint8_t device)
+{
+	dispositivoAlvo = device;
+	i2c.configura(PIN16, PIN5);
+}
+
 
 void MEMORIA::write(char *buffer, uint16_t endereco_base)
 {
@@ -47,7 +48,7 @@ void MEMORIA::fazEscrita (uint16_t endereco, uint8_t valor)
 
 void MEMORIA::testa_se_esta_pronto(void)
 {
-	uint8_t a;
+	uint8_t a = 0x50 | dispositivoAlvo;
 	while (1)
 	{
 		i2c.start();
