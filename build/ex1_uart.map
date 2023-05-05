@@ -18609,7 +18609,7 @@ END GROUP
 
 .iram0.text     0x0000000040100080     0x4557
                 0x0000000040100080                _iram_text_start = ABSOLUTE (.)
- *(.iram1 .iram1.* EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text)
+ *(.iram1 .iram1.* EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text)
  .iram1.0.literal
                 0x0000000040100080       0x1c /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/esp8266/libesp8266.a(task_wdt.o)
  .iram1.1.literal
@@ -19075,7 +19075,6 @@ END GROUP
  *fill*         0x0000000040103fef        0x0 
  *fill*         0x0000000040103fef        0x0 
  *fill*         0x0000000040103fef        0x0 
- *libspi_flash.a:th25q16hb.*(.literal .literal.* .text .text.*)
  *libspi_flash.a:spi_flash_raw.*(.literal .literal.* .text .text.*)
  *fill*         0x0000000040103fef        0x1 
  .text.Cache_Read_Disable_2
@@ -19120,6 +19119,7 @@ END GROUP
  *fill*         0x00000000401045d7        0x0 
  *fill*         0x00000000401045d7        0x0 
  *fill*         0x00000000401045d7        0x0 
+ *libspi_flash.a:th25q16hb.*(.literal .literal.* .text .text.*)
                 0x00000000401045d7                _iram_text_end = ABSOLUTE (.)
 
 .iram0.bss      0x00000000401045d8      0x20c
@@ -19128,6 +19128,7 @@ END GROUP
  *libcore.a:(.bss .bss.* COMMON)
  .bss.s_cpu_speed_up_nest
                 0x00000000401045d8        0x2 /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/lib/libcore.a(user_interface.o)
+ *libfreertos.a:freertos_hooks.*(.bss .bss.* COMMON)
  *libfreertos.a:timers.*(.bss .bss.* COMMON)
  *fill*         0x00000000401045da        0x2 
  .bss.xLastTime$4351
@@ -19144,6 +19145,9 @@ END GROUP
                 0x00000000401045f0       0x14 /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/freertos/libfreertos.a(timers.o)
  .bss.xActiveTimerList1
                 0x0000000040104604       0x14 /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/freertos/libfreertos.a(timers.o)
+ *libfreertos.a:queue.*(.bss .bss.* COMMON)
+ *libfreertos.a:list.*(.bss .bss.* COMMON)
+ *libfreertos.a:impure.*(.bss .bss.* COMMON)
  *libfreertos.a:tasks.*(.bss .bss.* COMMON)
  .bss.uxSchedulerSuspended
                 0x0000000040104618        0x4 /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/freertos/libfreertos.a(tasks.o)
@@ -19188,12 +19192,8 @@ END GROUP
  .bss.pxCurrentTCB
                 0x00000000401047e0        0x4 /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/freertos/libfreertos.a(tasks.o)
                 0x00000000401047e0                pxCurrentTCB
- *libfreertos.a:event_groups.*(.bss .bss.* COMMON)
- *libfreertos.a:queue.*(.bss .bss.* COMMON)
- *libfreertos.a:impure.*(.bss .bss.* COMMON)
- *libfreertos.a:freertos_hooks.*(.bss .bss.* COMMON)
- *libfreertos.a:list.*(.bss .bss.* COMMON)
  *libfreertos.a:stream_buffer.*(.bss .bss.* COMMON)
+ *libfreertos.a:event_groups.*(.bss .bss.* COMMON)
  *liblwip.a:(.bss .bss.* COMMON)
                 0x00000000401047e4                . = ALIGN (0x4)
                 0x00000000401047e4                _iram_bss_end = ABSOLUTE (.)
@@ -19277,8 +19277,8 @@ END GROUP
  *fill*         0x000000003ffe83c2        0x2 
  .rodata.s_log_color
                 0x000000003ffe83c4       0x18 /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/log/liblog.a(log.o)
- *libspi_flash.a:th25q16hb.*(.rodata .rodata.*)
  *libspi_flash.a:spi_flash_raw.*(.rodata .rodata.*)
+ *libspi_flash.a:th25q16hb.*(.rodata .rodata.*)
                 0x000000003ffe83dc                _data_end = ABSOLUTE (.)
                 0x000000003ffe83dc                . = ALIGN (0x4)
 
@@ -19292,7 +19292,7 @@ END GROUP
 .dram0.bss      0x000000003ffe83e0      0xf58
                 0x000000003ffe83e0                . = ALIGN (0x8)
                 0x000000003ffe83e0                _bss_start = ABSOLUTE (.)
- *(EXCLUDE_FILE(*liblwip.a *libfreertos.a:timers.* *libfreertos.a:tasks.* *libfreertos.a:event_groups.* *libfreertos.a:queue.* *libfreertos.a:impure.* *libfreertos.a:freertos_hooks.* *libfreertos.a:list.* *libfreertos.a:stream_buffer.* *libcore.a) .bss EXCLUDE_FILE(*liblwip.a *libfreertos.a:timers.* *libfreertos.a:tasks.* *libfreertos.a:event_groups.* *libfreertos.a:queue.* *libfreertos.a:impure.* *libfreertos.a:freertos_hooks.* *libfreertos.a:list.* *libfreertos.a:stream_buffer.* *libcore.a) .bss.* EXCLUDE_FILE(*liblwip.a *libfreertos.a:timers.* *libfreertos.a:tasks.* *libfreertos.a:event_groups.* *libfreertos.a:queue.* *libfreertos.a:impure.* *libfreertos.a:freertos_hooks.* *libfreertos.a:list.* *libfreertos.a:stream_buffer.* *libcore.a) COMMON)
+ *(EXCLUDE_FILE(*liblwip.a *libfreertos.a:freertos_hooks.* *libfreertos.a:timers.* *libfreertos.a:queue.* *libfreertos.a:list.* *libfreertos.a:impure.* *libfreertos.a:tasks.* *libfreertos.a:stream_buffer.* *libfreertos.a:event_groups.* *libcore.a) .bss EXCLUDE_FILE(*liblwip.a *libfreertos.a:freertos_hooks.* *libfreertos.a:timers.* *libfreertos.a:queue.* *libfreertos.a:list.* *libfreertos.a:impure.* *libfreertos.a:tasks.* *libfreertos.a:stream_buffer.* *libfreertos.a:event_groups.* *libcore.a) .bss.* EXCLUDE_FILE(*liblwip.a *libfreertos.a:freertos_hooks.* *libfreertos.a:timers.* *libfreertos.a:queue.* *libfreertos.a:list.* *libfreertos.a:impure.* *libfreertos.a:tasks.* *libfreertos.a:stream_buffer.* *libfreertos.a:event_groups.* *libcore.a) COMMON)
  .bss.s_nmi_wd_state
                 0x000000003ffe83e0        0x4 /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/esp8266/libesp8266.a(task_wdt.o)
  .bss.s_reset_reason
@@ -19561,7 +19561,7 @@ END GROUP
 .flash.text     0x0000000040210010    0x152e6
                 0x0000000040210010                _stext = .
                 0x0000000040210010                _text_start = ABSOLUTE (.)
- *(EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal.* EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text.* .wifi0iram .wifi0iram.*)
+ *(EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal.* EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text.* .wifi0iram .wifi0iram.*)
  .literal.user_init_entry
                 0x0000000040210010       0x1c /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/esp8266/libesp8266.a(startup.o)
                                          0x50 (size before relaxing)
@@ -23920,7 +23920,7 @@ END GROUP
  *(.rodata2 .rodata2.*)
  .rodata2.266   0x0000000040225400      0x118 /home/miguel/esp/ESP8266_RTOS_SDK/components/esp8266/lib/libphy.a(phy_chip_v5_romfunc.o)
                 0x0000000040225400                g_phyFuns_instance
- *(EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *liblog.a) .rodata EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *liblog.a) .rodata.*)
+ *(EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *liblog.a) .rodata EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *liblog.a) .rodata.*)
  .rodata.user_init_entry.str1.4
                 0x0000000040225518       0x94 /home/miguel/Documentos/Projeto-Agenda-telef-nica/build/esp8266/libesp8266.a(startup.o)
  .rodata.call_start_cpu.str1.4

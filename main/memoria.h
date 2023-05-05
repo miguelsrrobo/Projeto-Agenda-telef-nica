@@ -22,10 +22,10 @@ class MEMORIA{
         void testa_se_esta_pronto(void);
     public:
         void fazEscrita (uint16_t endereco, uint8_t valor);
-
         void init(uint8_t device);
         void write(char *buffer, uint16_t endereco_base);
         uint8_t read(uint16_t endereco);
+        
         void read_all(uint16_t numero_do_registro, tipo_registro &R);
         void remove_register(uint16_t numero_do_registro, tipo_registro R);
 };
